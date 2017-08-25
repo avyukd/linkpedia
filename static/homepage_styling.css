@@ -1,0 +1,86 @@
+
+
+body{
+    background: url('green_gradient.jpg');
+    background-size: cover;
+}
+input[type="search"]{
+	padding-left:5px;
+	border: 50px;
+	color:grey;
+	width:250px;
+}
+label{
+	font-size:15px;
+}
+#searchBar{
+	margin-top:25px;
+	margin-left:10%;
+}
+.top{
+
+    z-index:-1;
+    padding: 0;
+    list-style: none;
+}
+
+.top li{
+
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color: darkblue;
+    opacity: .6;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#first{
+    margin-left:10%;
+}
+#last{
+	margin-right:10%;
+}
+
+.top li a{
+    text-decoration: none;
+    color: whitesmoke;
+    display:block;
+
+
+}
+
+.top li a:hover{
+  background-color:black;
+
+}
+
+
+.collapse{
+  cursor: pointer;
+  display: block;
+  background: white;
+  font-size:18px;
+}
+.collapse + input[type="checkbox"]{
+  display: none; /* hide the checkboxes */
+}
+.collapse + input[type="checkbox"] + div{
+  display:none;
+}
+.collapse + input[type="checkbox"]:checked + div{
+  display:block;
+  background-color:white;
+}
+#results{
+	height:70%;
+	width:30%;
+	overflow:scroll;
+	background-color:white;
+	
+}
+.links{
+	font-size:14px;
+}

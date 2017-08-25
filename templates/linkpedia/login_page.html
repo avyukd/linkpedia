@@ -1,0 +1,25 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "login_styling.css"%}"/>
+
+<body>
+
+<div id="all">
+<h1>Linkpedia</h1>
+<form method="post" id="/login">
+{% csrf_token %}
+<label>Username:</label>
+<input name="username" type="text"></input><br>
+<label>Password:</label>
+<input name="password" type="password"></input><br>
+<input id="button" type="submit" value="Login"/>
+</form>
+<p>{{validationfailure}}</p>
+<form>
+<a href="http://127.0.0.1:8000/linkpedia/signupint" class="button">Sign Up</a>
+</div>
+
+</form>
+</body>
+</html>

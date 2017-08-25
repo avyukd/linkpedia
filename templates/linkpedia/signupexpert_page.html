@@ -1,0 +1,32 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "form_styling.css"%}"/>
+
+<body>
+
+<div id="all">
+<h1>Expert Sign Up</h1>
+<form id="/signupexpert" method="post">
+{% csrf_token %}
+	<label>Name: </label>
+	<input name="name" type="text"/><br>
+	<label>Username:</label>
+	<input name="username" type="text"/><br>
+	<label>Password:</label>
+	<input name="ogpword" type="password"/><br>
+	<label>Confirm Password:</label>
+	<input name="password" type="password"/><br>
+	<label>Profession:</label>
+	<input name="profession" type="text"/><br>
+	<label>Research Institution:</label>
+	<input name="research_institution"type="text"/><br>
+	<label>Email:</label>
+	<input name="email" type="text"/><br>
+	<label>Description of Expertise:</label><br>
+	<textarea name="description_of_expertise" rows="10" cols="50"></textarea><br>
+	<p>{{donotmatch}}</p>
+	<input type="submit"/>
+</form>
+</body>
+</html>

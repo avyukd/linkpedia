@@ -1,0 +1,23 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "form_styling.css"%}"/>
+
+<body>
+
+<div id="all">
+<h1>Add Link</h1>
+<form id="/addlink" method="post">
+{% csrf_token %}
+<label>Content 1 URL:</label>
+<input name = "content_one_url" type="text"/><br>
+<label>Content 2 URL:</label>
+<input name="content_two_url" type="text"/><br>
+<label>Title:</label>
+<input name="link_title" type="text"/><br>
+<label>Description:</label><br>
+<textarea rows="10" cols="50" name="link_description" ></textarea><br>
+<input type="submit"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body{
+	background-image: url("green_gradient.jpg");
+	background-repeat: no-repeat
+}
+
+h1{
+	color:grey;
+	font-family: "Brush Script MT";
+	font-size:85px;
+	margin-bottom:0%;
+}
+p{
+	color:red;
+}
+label{
+	font-family:"Brush Script MT";
+	font-size:30px;	
+}
+button{
+	text-align:center;
+	border-radius:1px;
+}
+
+input[type=submit]{
+	text-align:center;
+	border-radius:1px;
+}
+#login{
+	margin-left:15%;
+	margin-top:2%;
+}
+#signup{
+	margin-left:25%;
+}
+#all{
+	margin-top: 15%;
+	margin-left:35%;
+}

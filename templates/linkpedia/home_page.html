@@ -1,0 +1,42 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "homepage_styling.css"%}"/>
+
+<body>
+<div id="header">
+
+<ul class="top">
+    <li id="first"><a href="http://127.0.0.1:8000/linkpedia/viewprofile/{{user.username}}">{{user.username}}</a></li>
+    <li><a href="http://127.0.0.1:8000/linkpedia/addcontent/{{user.username}}">Add Content</a></li>
+    <li><a href="http://127.0.0.1:8000/linkpedia/addlink/{{user.username}}">{{exists}}</a></li>
+	<li><a href="http://127.0.0.1:8000/linkpedia/contactus/">Contact Us</a></li>
+    <li id="last"><a href="http://127.0.0.1:8000/linkpedia/login/">Logout<br></a></li>
+</ul>
+</div>
+<div id="searchBar">
+<form>
+<label>Search: </label>
+<input type="search" value="Datapoints"></input>
+<input type="search" value="Countries"></input>
+</form>
+<div id="results">
+<h2>Datapoints: </h2>
+{% for next in datapoints %}
+	<label class="collapse" for="_{{next.pk}}">- <a href="{{next.data_url}}">{{next.data_title}}</a></label>
+	<input id="_{{next.pk}}" type="checkbox"> 
+	<div>
+	<ul>
+	{% for relate in links %}
+		{% if relate.content_one_url == next.data_url %}
+			<li class="links"><a href= "http://127.0.0.1:8000/linkpedia/{{relate.pk}}">{{relate.link_title}}</a></li>
+		{% endif %}
+	{% endfor %}
+	</ul>
+	</div>
+
+{% endfor %}
+</div>
+</div>
+</body>
+</html>

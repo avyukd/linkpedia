@@ -1,0 +1,23 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "form_styling.css"%}"/>
+
+<body>
+<div id="all">
+<h1>Add Content</h1>
+<form id="/addcontent" method="post">
+{% csrf_token %}
+<label>URL:</label>
+<input name="data_url" type="text"></input><br>
+<label>Related Country:</label>
+<input name="country" type="text"></input><br>
+<label>Title:</label>
+<input type="text" name="data_title"></input><br>
+<label>Description:</label><br>
+<textarea name="data_description" rows="10" cols="50"></textarea><br>
+<input type="submit"></input>
+</form>
+</div>
+</body>
+</html>

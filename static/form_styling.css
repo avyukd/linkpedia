@@ -1,0 +1,30 @@
+body{
+	background-image: url("beige_gradient.png");
+}
+
+h1{
+	color:grey;
+	font-family: "Brush Script MT";
+	font-size:85px;
+	margin-bottom:0%;
+}
+label{
+	font-family:"Brush Script MT";
+	font-size:30px;	
+	text-align:center;
+}
+input[type="text"], input[type="password"]{
+	border = 1px;
+	margin-left:5%;
+	
+}
+input[type="submit"]{
+	margin-left:25%;
+	margin-top:5%;
+}
+#all{
+	margin-top: 5%;
+	margin-left:35%;
+}
+
+
