@@ -1,0 +1,41 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "form_styling.css"%}"/>
+
+<body>
+
+<div id="all">
+<div class="container">  
+	<div class="inside">
+		<form id="/professionform" class="linkform" method="post">
+		{% csrf_token %}
+			<div class="form-title-row">
+			<h1>Add Profession for {{RelatedExpert.username}}</h1>
+			</div>
+			<div class="form-row">
+				<label>Title: </label>
+				<input name="title" type="text" tabindex="1" required autofocus /><br>
+			</div>
+			<div class="form-row">
+				<label>Description of expertise in the field:</label>
+                <textarea name="description_of_expertise" rows="10" cols="50"></textarea><br>
+			</div>
+			<div class="form-row">
+				<label>Research institution:</label>
+				<input name="research_institution" type="text" tabindex="3" required /><br>
+			</div>
+			<div class="form-row">
+				<label>Specific achievements:</label>
+                <textarea name="specific_achievements" type="text" tabindex="4" rows="10" cols="50" required></textarea><br>
+			</div>
+            <div class="form-row" id="last">
+				<input type="submit" class="button"/><br>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
+</body>
+</html>
+

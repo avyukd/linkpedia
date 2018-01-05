@@ -1,0 +1,35 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "form_styling.css"%}"/>
+
+<body>
+
+<div id="all">
+<div class="container">  
+	<div class="inside">
+		<form method="post" action="mailto:avyukd@gmail.com">
+			{% csrf_token %}
+			<div class="form-title-row">
+				<h1>Contact Us</h1>
+			</div>
+			<div class="form-row">
+				<label>Full name:</label>
+				<input name = "name" type="text"/><br>
+			</div>
+			<div class="form-row">
+				<label>Email:</label>
+				<input name="email" type="email"/><br>
+			</div>
+			<div class="form-row">
+				<label>Comment:</label>
+				<input name="comment" type="text"/><br>
+			</div>
+			<div class="form-row">
+				<input type="submit" class="button" href="mailto:avyukd@gmail.com" formaction="http://127.0.0.1:8000/linkpedia/home/expert/{{ex}}"/><br>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

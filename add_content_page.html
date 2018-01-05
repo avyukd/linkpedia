@@ -1,0 +1,51 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "form_styling.css"%}"/>
+
+<body>
+<div id="all">
+<div class="container">  
+	<div class="inside">
+		<form id="/addcontent" method="post">
+			{% csrf_token %}
+			<div class="form-title-row">
+				<h1>Add Content</h1>
+			</div>
+			<div class="form-row">
+				<label>URL:</label>
+				<input name="data_url" type="text"></input><br>
+			</div>
+			<div class="form-row">
+				<label>Related Country:</label>
+				<input name="country" type="text"></input><br>
+			</div>
+			<div class="form-row">
+				<label>City:</label>
+				<input name="city" type="text"></input><br>
+			</div>
+			<div class="form-row">
+				<label>Longitude:</label>
+				<input name="longitude" type="number" step="0.01"></input><br>
+			</div>
+			<div class="form-row">
+				<label>Latitude:</label>
+				<input name="latitude" type="number" step="0.01"></input><br>
+			</div>
+			<div class="form-row">
+				<label>Title:</label>
+				<input type="text" name="data_title"></input><br>
+			</div>
+			<div class="form-row">
+				<label>Description:</label><br>
+				<textarea name="data_description" rows="10" cols="50"></textarea><br>
+			</div>
+			<div class="form-row">
+				<input type="submit" class="button"></input>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
+</body>
+</html>

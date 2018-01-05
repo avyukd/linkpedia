@@ -1,0 +1,55 @@
+{% load static %}
+<meta charset="UTF-8">
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "homepage_styling.css"%}"/>
+
+<body>
+
+
+<div id="header">
+
+<ul class="top">
+    <li id="first"><a href="http://127.0.0.1:8000/linkpedia/viewprofile/{{user.username}}">{{user.username}}</a></li>
+    <li><a href="http://127.0.0.1:8000/linkpedia/addcontent/{{user.username}}">Add Content</a></li>
+    <li><a href="http://127.0.0.1:8000/linkpedia/addlink/{{user.username}}">{{exists}}</a></li>
+	<li><a href="http://127.0.0.1:8000/linkpedia/contactus/{{user.username}}">Contact Us</a></li>
+    <li id="last"><a href="http://127.0.0.1:8000/linkpedia/login/">Logout<br></a></li>
+</ul>
+</div>
+
+<div id="map"></div>
+<script src="{% static "imap.js" %}" ></script>
+<script src="{% static "maps.js" %}" ></script>
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKg4RbdSfcneaykKkO8m6Aa56yazR7z4Q&callback=initMap"></script>
+
+
+<div id="searchBar">
+<form>
+<input type="search" value="Datapoints"></input><br>
+<input type="search" value="Countries"></input><br>
+<input type="search" value="Links"></input><br>
+<input type="search" value="Authors"></input><br>
+</form>
+<div id="results">
+<h2 style="text-align:center; position:relative;">Datapoints</h2>
+{% for next in datapoints %}
+	<label class="collapse" for="_{{next.pk}}"> <a href="{{next.data_url}}">{{next.data_title}}</a></label>
+	<input id="_{{next.pk}}" type="checkbox"> 
+	<div>
+	<ul>
+	{% for relate in links %}
+		{% if relate.content_one_url == next.data_url %}
+			<li class="links"><a href= "http://127.0.0.1:8000/linkpedia/{{relate.pk}}">{{relate.link_title}}</a></li>
+		{% endif %}
+	{% endfor %}
+	</ul>
+	</div>
+
+{% endfor %}
+
+</div>
+</div>
+
+
+</body>
+</html>

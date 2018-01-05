@@ -1,0 +1,73 @@
+body {
+  background-image: url("green_gradient.png");
+  font-family: sans-serif;
+}
+.container {
+  position: absolute;
+  top:-20%;
+  width: 100%;
+
+}
+
+  
+.inside {
+  position: relative;
+  display: block;
+  width: 45%;
+  margin: 0 auto;
+  padding: 15em 2em 5em;
+  background-color:#28d;
+}
+
+.inside .form-title-row h1{
+	color:white;
+}
+.inside .form-row label {
+  display: block;
+  padding-bottom: 0.5em;
+  color:white;
+}
+.inside .form-row input,
+.inside .form-row textarea {
+  width: 100%;
+  box-shadow: 0;
+  background: transparent;
+  color: white;
+  margin-bottom: 5%;
+  padding-bottom:1em;
+}
+.inside .form-row input {
+  border-width: 0 0 0.1em;
+  border-color: #fff;
+  border-style: solid;
+}
+.inside .form-row textarea {
+  border: 0.1em solid #fff;
+  border-radius: 0.25em;
+}
+.button {
+	background-color: white;
+    border: none;
+    color: #28d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+	margin: 0 auto;
+	width:50%;
+	margin-left:25%
+	
+}
+.inside .form-row .button {
+	background-color: white;
+    border: none;
+    color: #28d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+	margin: 0 auto;
+	width:50%;
+	margin-left:25%
+	
+}

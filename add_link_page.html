@@ -1,0 +1,40 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "form_styling.css"%}"/>
+
+<body>
+
+<div id="all">
+<div class="container">  
+	<div class="inside">
+		<form id="/addlink" method="post">
+			{% csrf_token %}
+			<div class="form-title-row">
+				<h1>Add Link</h1>
+			</div>
+			<div class="form-row">
+				<label>Content 1 URL:</label>
+				<input name = "content_one_url" type="text"/><br>
+			</div>
+			<div class="form-row">
+				<label>Content 2 URL:</label>
+				<input name="content_two_url" type="text"/><br>
+			</div>
+			<div class="form-row">
+				<label>Title:</label>
+				<input name="link_title" type="text"/><br>
+			</div>
+			<div class="form-row">
+				<label>Description:</label><br>
+				<textarea rows="10" cols="50" name="link_description" ></textarea><br>
+			</div>
+			<div class="form-row">
+				<input type="submit" class="button"/><br>
+			</div>
+			<label>{{DNEerror}}</label>
+		</form>
+	</div>
+</div>
+</body>
+</html>

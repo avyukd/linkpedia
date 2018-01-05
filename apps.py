@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class LinkpediaConfig(AppConfig):
-    name = 'linkpedia'
+class Linkpediav2Config(AppConfig):
+    name = 'linkpediav2'

@@ -1,0 +1,1 @@
+myFunction([{"lat": 79, "lng": 39}, {"lat": 48, "lng": 39}, {"lat": 0, "lng": 0}, {"lat": 0, "lng": 0}]);

@@ -1,0 +1,88 @@
+#map {
+	float:right;
+	display:inline-block;
+	margin-top:3%;
+	margin-right:12%;
+	width:600px;
+	height:500px;
+}
+body{
+    background-image: url("green_gradient.png");
+	background-repeat: no-repeat
+}
+
+label{
+	font-size:15px;
+}
+
+.header{
+	margin: 0 auto;
+}
+.top{
+
+    z-index:-1;
+    padding: 0;
+    list-style: none;
+}
+
+.top li{
+
+    float: left;
+    width: 20%;
+    height: 40px;
+    background-color: #28d;
+    opacity: .85;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.top li a{
+    text-decoration: none;
+    color: whitesmoke;
+    display:block;
+
+
+}
+
+.top li a:hover{
+  background-color:black;
+
+}
+
+
+.collapse{
+  cursor: pointer;
+  display: block;
+  background: white;
+  font-size:18px;
+}
+.collapse + input[type="checkbox"]{
+  display: none; /* hide the checkboxes */
+}
+.collapse + input[type="checkbox"] + div{
+  display:none;
+}
+.collapse + input[type="checkbox"]:checked + div{
+
+  background-color:white;
+}
+#results{
+	height:70%;
+	width:30%;
+	overflow:scroll;
+	background-color:white;
+}
+
+.links{
+	font-size:14px;
+}
+
+#searchBar{
+	margin-top:25px;
+	margin-left:10%;
+}
+#searchBar input{
+	disply:inline-block;
+}

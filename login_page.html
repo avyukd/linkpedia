@@ -1,0 +1,27 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "login_styling.css"%}"/>
+
+<body>
+<img src="{% static "final_logo.png"%}"  style="width:150px;height:118px;" class="logo" >
+<div class="login" id="all">
+<p class="login-header">Linkpedia Data Builder</p>
+<form method="post" id="/login">
+{% csrf_token %}
+<div class ="login-container">
+<label>Username:</label>
+<input name="username" type="text"></input><br>
+<label>Password:</label>
+<input name="password" type="password"></input><br>
+<input id="button" type="submit" value="Login"/>
+</div>
+</form>
+<p style='color:red'>{{validationfailure}}</p>
+<form>
+<a href="http://127.0.0.1:8000/linkpedia/signupint" class="button" id="signup">Sign Up</a>
+</div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "linkinfo_styling.css"%}"/>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+
+<body>
+<a href="http://127.0.0.1:8000/linkpedia/home">Home</a>
+
+<h1>{{link.link_title}}</h1>
+<p>Datapoints being linked: {{link.content_one_url}} and {{link.content_two_url}}</p>
+<p>Rating: {{link.link_rating}}</p>
+<p>Description: <br>{{link.link_description}}</p>
+<p>Created on: {{link.timestamp}}</p>
+<div class="stars">
+<h3>Rate this link:<h3>
+<form id="/{{link.pk}}" method="post">
+	{% csrf_token %}
+	<input type="number" name="link_rating" min="1" max="5">
+<input type="submit"/>
+</form>
+</div>
+
+</body>
+</html>

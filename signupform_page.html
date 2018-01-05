@@ -1,0 +1,42 @@
+{% load static %}
+
+<html>
+<link rel="stylesheet" type="text/css" href="{% static "form_styling.css"%}"/>
+
+<body>
+
+<div id="all">
+<form id="/signupform" method="post" >
+
+{% csrf_token %}
+<div class="container">  
+	<div class="inside">
+		<div class="form-title-row">
+			<h1>Linkpedia User Sign Up</h1>
+		</div>
+		<div class="form-row">
+			<label>Email:</label>
+			<input name="email" type="email"/><br>
+		</div>
+		<div class="form-row">
+			<label>Username:</label>
+			<input name="username" type="text"/><br>
+		</div>
+		<div class="form-row">
+			<label>Password:</label>
+			<input name="ogpword" type="password"/><br>
+		</div>
+		<div class="form-row">
+			<label>Confirm Password:</label>
+			<input name="password" type="password"/><br>
+		</div>
+
+		<div class="form-row" id="last">
+			<input type="submit" class="button"/><br>
+		</div>
+		<p>{{donotmatch}}</p>
+	</div>
+</div>
+</form>
+</body>
+</html>
